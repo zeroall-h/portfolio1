@@ -15,11 +15,18 @@ a {
   font-size: 40px;
   font-weight: 800;
 }
+.title_line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 3px solid black;
+  margin: 10px 0;
+}
+
 .mid_line {
   width: 100%;
   height: 1px;
   border-bottom: 1px solid black;
-  margin: 10px 0;
+  margin: 30px 0;
 }
 
 /* header */
@@ -28,7 +35,7 @@ header {
   height: 100px;
   background: #fff url(images/logo_header.png) no-repeat;
   background-size: 214px;
-  background-position: 15px 50%;
+  background-position: 6vw 50%;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -40,16 +47,15 @@ header h1 {
 header #gnb {
   position: absolute;
   top: 50%;
-  right: 10px;
+  right: 6vw;
   transform: translateY(-50%);
 }
-.title_line {
-  width: 100%;
-  height: 1px;
-  border-bottom: 3px solid black;
-  margin: 10px 0;
+header #gnb img {
+  width: 25px;
 }
-
+header .navigator {
+  display: none;
+}
 /* main */
 main {
   height: 650px;
@@ -59,17 +65,18 @@ main {
   position: relative;
 }
 main .txt_box {
-  width: 400px;
-  height: 145px;
+  width: 80%;
+  height: 25%;
   background-color: rgba(0, 0, 0, 0.6);
   display: grid;
   place-items: center;
 }
 main .txt_box p {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 900;
   text-align: center;
   color: #fff;
+  transition: 0.5s;
 }
 main a {
   position: absolute;
@@ -85,6 +92,10 @@ main a:nth-of-type(2) {
   left: 50%;
   transform: translateX(-50%);
   bottom: 10px;
+}
+main .txt_box .small_txt {
+  font-size: 24px;
+  font-weight: 400;
 }
 /* business */
 .business {
@@ -168,7 +179,7 @@ main a:nth-of-type(2) {
   text-indent: 40px;
   padding: 50px 0;
   font-weight: 700;
-  border-top: 1px solid black;
+  border-top: 3px solid black;
 }
 #stand li:nth-child(1) {
   border-top: none;
@@ -228,14 +239,30 @@ main a:nth-of-type(2) {
 }
 .global_img {
   width: 100%;
-  min-width: 100%;
-  height: 400px;
-  background: url(images/global_network.png) no-repeat 50% / cover;
+  height: 30vh;
+  background: no-repeat 50% / cover;
   margin: 20px 0;
 }
-.global p {
+.global_img1 {
+  background-image: url(images/global_network.png);
+}
+.global_img2 {
+  background-image: url(images/global_line.png);
+}
+.global_img3 {
+  background-image: url(images/global_trading.png);
+}
+#global_wrap {
   text-align: center;
 }
+#global_wrap a {
+  display: block;
+}
+#global_wrap li:nth-child(2),
+#global_wrap li:nth-child(3) {
+  display: none;
+}
+
 /* management */
 .management {
   background-color: #a6988d;
@@ -267,7 +294,7 @@ main a:nth-of-type(2) {
   margin-top: -10px;
 }
 .management .txt2 {
-  padding-top: 30px;
+  padding: 25px 15px 0;
   color: #fff;
   font-size: 14px;
   text-align: center;
@@ -432,8 +459,9 @@ main a:nth-of-type(2) {
 /* footer */
 footer {
   width: 100%;
-  height: 170px;
+  height: 190px;
   background-color: #000;
+  position: relative;
 }
 footer p {
   color: #fff;
@@ -448,9 +476,12 @@ footer .pf_box {
   text-align: center;
   line-height: 40px;
 }
-footer .go_up img {
+footer .go_up {
   display: block;
   width: 30px;
   height: 30px;
-  margin: -30px 90%;
+  background: url(images/arrow_footer.png) 50% / cover;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
 }
