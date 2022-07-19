@@ -4,7 +4,14 @@
 main .txt_box p {
   font-size: 40px;
 }
-
+main .txt_box .small_txt {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+}
+main .txt_box {
+  height: 32%;
+}
 /* business */
 .business .txt1 li:nth-child(1) {
   font-size: 22px;
@@ -35,6 +42,7 @@ main .txt_box p {
   position: relative;
   z-index: 9;
   margin-bottom: 200px;
+  height: 1200px;
 }
 #circle {
   display: grid;
@@ -65,12 +73,20 @@ main .txt_box p {
   transform: translateX(-50%);
 }
 .management .txt2 {
-  width: 200px;
+  width: 250px;
   margin: 0 auto;
+}
+/* change */
+.change {
+  padding: 88px 70px 0px;
+}
+.research {
+  padding: 0px 70px 60px;
 }
 /* value */
 .value {
   position: absolute;
+  height: 300px;
   width: 90%;
   left: 50%;
   top: 100%;
@@ -78,6 +94,12 @@ main .txt_box p {
   z-index: 999;
 }
 
+/* location */
+.location {
+  padding: 0px 70px 60px;
+}
+
+/* footer */
 footer .go_up {
   width: 40px;
   height: 40px;

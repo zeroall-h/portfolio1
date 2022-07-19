@@ -1,9 +1,10 @@
 @charset "utf-8";
 header {
-  background: transparent url(images/logo_header.png) no-repeat;
+  background: transparent url(../images/logo_header.png) no-repeat;
   background-size: 214px;
   background-position: 6vw 50%;
 }
+
 header #gnb {
   display: none;
 }
@@ -28,7 +29,7 @@ header .navigator a:hover {
 main {
   margin-top: -100px;
   height: 850px;
-  background: url(images/main_1.png) no-repeat 50% / cover;
+  background: url(../images/main_1.png) no-repeat 50% / cover;
   display: grid;
   place-items: center;
   position: relative;
@@ -66,7 +67,7 @@ main {
 }
 .wrap_focus {
   padding: 70px 150px 10px;
-  background: #000 url(images/img2_focus.jpg.png) no-repeat;
+  background: #000 url(../images/img2_focus.jpg.png) no-repeat;
   background-position: 100% 50%;
   background-size: 60%;
 }
@@ -82,16 +83,23 @@ main {
 }
 /* management */
 .management {
-  padding: 88px 150px 150px;
+  padding: 88px 50px 150px;
   margin-bottom: 200px;
+  height: 1000px;
+}
+.management #circle {
+  position: relative;
+  margin: 0 auto;
+  width: 1000px;
 }
 .management #circle li {
-  width: 550px;
-  height: 550px;
+  width: 450px;
+  height: 450px;
 }
 .management #circle li:nth-child(1) {
   position: absolute;
-  left: 35%;
+  left: 10%;
+  transform: translateX(-50%);
 }
 .management #circle li:nth-child(2) {
   position: absolute;
@@ -100,11 +108,14 @@ main {
 }
 .management #circle li:nth-child(3) {
   position: absolute;
-  left: 78%;
+  left: 68%;
+
   bottom: auto;
+  transform: none;
 }
 .management .txt2 {
-  width: 500px;
+  width: 300px;
+  margin: 0 auto;
 }
 .value {
   width: 80%;
@@ -137,12 +148,7 @@ main {
   width: 55%;
   order: 1;
 }
-.change .mid_line1 {
-  width: 100%;
-  height: 1px;
-  border-bottom: 1px solid black;
-  margin-top: 15px 0 15px;
-}
+
 /* research */
 .research h2 {
   padding: 0px 200px 40px;
