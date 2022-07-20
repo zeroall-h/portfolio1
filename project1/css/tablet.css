@@ -1,16 +1,20 @@
 @charset "utf-8";
 
 /* main */
+main .txt_box {
+  padding: 2.5rem 3rem;
+  width: auto;
+}
 main .txt_box p {
-  font-size: 40px;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 main .txt_box .small_txt {
   display: block;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
-}
-main .txt_box {
-  height: 32%;
+  margin-top: 1rem;
+  font-weight: 300;
 }
 /* business */
 .business .txt1 li:nth-child(1) {
@@ -31,8 +35,8 @@ main .txt_box {
 #global_wrap {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 40vh;
-  grid-gap: 30px;
+  grid-template-rows: 25rem, 10px;
+  grid-gap: 40px;
 }
 
 /* management */
@@ -42,7 +46,10 @@ main .txt_box {
   position: relative;
   z-index: 9;
   margin-bottom: 200px;
-  height: 1200px;
+  height: 70rem;
+}
+.management h2 {
+  padding-bottom: 1rem;
 }
 #circle {
   display: grid;

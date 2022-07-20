@@ -1,10 +1,11 @@
 @charset "utf-8";
 header {
-  background: transparent url(../images/logo_header.png) no-repeat;
-  background-size: 214px;
-  background-position: 6vw 50%;
+  background: transparent;
+  height: 80px;
 }
-
+header h1 {
+  width: 18rem;
+}
 header #gnb {
   display: none;
 }
@@ -46,20 +47,52 @@ main {
 }
 .business .wrap {
   display: grid;
+  grid-gap: 0px;
   grid-template-columns: repeat(4, 1fr);
 }
 .business .txt1 {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 3rem;
+  left: 3rem;
   transition: 0.5s;
   font-weight: 500;
-  font-size: 28px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.business .txt1 li:nth-child(1) {
+  font-size: 1rem;
   color: #fff;
 }
 /* standards */
 .standards {
   padding: 88px 150px 40px;
+}
+.standards .title_line {
+  display: none;
+}
+#stand {
+  padding-top: 30px;
+  display: flex;
+
+  justify-content: space-between;
+}
+
+#stand li:nth-child(1) {
+  border-top: 1px solid #000;
+}
+#stand .standard_subtitle {
+  padding: 20px 2.5rem;
+  font-size: 1.875rem;
+}
+#stand li {
+  font-size: 1.125rem;
+  width: 28rem;
+  border-top: 1px solid #000;
+  padding: 30px 0px;
+}
+#stand .txt1 {
+  padding: 80px 2.5rem;
+  border-bottom: 2px solid #000;
 }
 /* focus */
 .focus h2 {
@@ -71,9 +104,25 @@ main {
   background-position: 100% 50%;
   background-size: 60%;
 }
+.wrap_focus h3 {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+.wrap_focus p {
+  padding-left: 2.813rem;
+  font-size: 1.125rem;
+}
+.focus .viewmore_btn {
+  margin-left: 2.813rem;
+  margin-top: 80px;
+  border: 3px solid #fff;
+  display: grid;
+  place-items: center;
+}
+
 /* global */
 #global_wrap {
-  grid-template-rows: 50vw, 10vw;
+  grid-template-columns: repeat(3, 1fr);
 }
 .global h2 {
   padding: 88px 150px 10px;
@@ -85,7 +134,10 @@ main {
 .management {
   padding: 88px 50px 150px;
   margin-bottom: 200px;
-  height: 1000px;
+  height: 60rem;
+}
+.management h2 {
+  padding-bottom: 3rem;
 }
 .management #circle {
   position: relative;
@@ -174,5 +226,5 @@ main {
 .location {
   width: 100%;
   background-color: #fff;
-  padding: 88px 200px 40px;
+  padding: 88px 200px 60px;
 }

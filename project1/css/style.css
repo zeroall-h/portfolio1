@@ -5,15 +5,16 @@ body {
   font-family: "Noto Sans KR";
   line-height: 1.8;
 }
-.br {
+.enter {
   display: block;
 }
 a {
   color: #000;
 }
 .title {
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 800;
+  letter-spacing: -0.15rem;
 }
 .title_line {
   width: 100%;
@@ -21,7 +22,6 @@ a {
   border-bottom: 3px solid black;
   margin: 10px 0;
 }
-
 .mid_line {
   width: 100%;
   height: 1px;
@@ -32,47 +32,52 @@ a {
 /* header */
 header {
   width: 100%;
-  height: 100px;
-  background: #fff url(../images/logo_header.png) no-repeat;
-  background-size: 214px;
-  background-position: 6vw 50%;
+  height: 12vh;
+  background-color: #fff;
   position: sticky;
   top: 0;
   z-index: 999;
 }
 header h1 {
-  width: 100%;
-  text-indent: -9999px;
+  width: 150px;
+  position: absolute;
+  top: 50%;
+  left: 4%;
+  transform: translateY(-50%);
+}
+header h1 img,
+header #gnb img {
+  vertical-align: middle;
 }
 header #gnb {
   position: absolute;
-  top: 50%;
   right: 6vw;
+  top: 50%;
   transform: translateY(-50%);
 }
 header #gnb img {
-  width: 25px;
+  width: 20px;
 }
 header .navigator {
   display: none;
 }
 /* main */
 main {
-  height: 650px;
-  background: url(../images/main_1.png) no-repeat 50% / cover;
+  height: 500px;
+  background: url(../images/main_img_001.png) no-repeat 40% 50% / cover;
   display: grid;
   place-items: center;
   position: relative;
 }
 main .txt_box {
   width: 80%;
-  height: 28%;
   background-color: rgba(0, 0, 0, 0.6);
   display: grid;
   place-items: center;
+  padding: 10px;
 }
 main .txt_box p {
-  font-size: 30px;
+  font-size: 1.4rem;
   font-weight: 900;
   text-align: center;
   color: #fff;
@@ -84,9 +89,11 @@ main a {
 }
 main a:nth-of-type(1) {
   left: 10px;
+  width: 20px;
 }
 main a:nth-of-type(3) {
   right: 10px;
+  width: 20px;
 }
 main a:nth-of-type(2) {
   left: 50%;
@@ -121,16 +128,16 @@ main .txt_box .small_txt {
   background-repeat: no-repeat;
 }
 .image1 {
-  background-image: url(../images/elec_business.png);
+  background-image: url(../images/business_img_001.png);
 }
 .image2 {
-  background-image: url(../images/img-13.jpg);
+  background-image: url(../images/business_img_002.jpg);
 }
 .image3 {
-  background-image: url(../images/chemical_business.png);
+  background-image: url(../images/business_img_003.png);
 }
 .image4 {
-  background-image: url(../images/mechanics_business.jpg);
+  background-image: url(../images/business_img_004.jpg);
 }
 .image1:hover,
 .image2:hover,
@@ -141,15 +148,18 @@ main .txt_box .small_txt {
 }
 .business .txt1 {
   position: absolute;
-  bottom: 40px;
-  left: 20px;
+  bottom: 2.5rem;
+  left: 2.5rem;
   transition: 0.5s;
   font-weight: 500;
-  font-size: 28px;
+  font-size: 1.2rem;
   color: #fff;
 }
 .business .txt1 li:nth-child(1) {
-  font-size: 16px;
+  font-size: 1rem;
+}
+.business .txt1 li:nth-child(2) {
+  font-weight: 400;
 }
 .image1:hover .txt1,
 .image2:hover .txt1,
@@ -166,7 +176,7 @@ main .txt_box .small_txt {
   bottom: -50px;
 }
 
-/* standards */
+/* our standards */
 .standards {
   padding: 88px 38px 38px;
 }
@@ -174,26 +184,29 @@ main .txt_box .small_txt {
   display: grid;
 }
 #stand li {
-  font-size: 20px;
-  text-indent: 40px;
-  padding: 50px 0;
-  font-weight: 700;
+  padding: 1.875rem 0;
+  font-size: 1rem;
+  font-weight: 300;
   border-top: 3px solid black;
+}
+#stand .standard_subtitle {
+  font-size: 1.25rem;
+  padding: 1.2rem 2.5rem 0;
+  word-break: keep-all;
+  letter-spacing: -1px;
+  font-weight: 700;
 }
 #stand li:nth-child(1) {
   border-top: none;
 }
 #stand .txt1 {
   margin-top: 30px;
-  padding: 60px 40px;
-  font-size: 16px;
+  padding: 2.5rem;
   background-color: #f9f9f9;
-  text-indent: 0;
   line-height: 1.6;
-  font-weight: 500;
   border-bottom: 1px solid black;
 }
-#stand .br1 {
+#stand .spacing {
   display: block;
   margin-top: 30px;
 }
@@ -207,21 +220,23 @@ main .txt_box .small_txt {
   width: 100%;
   height: 600px;
   color: #fff;
-  background: url(../images/img2_focus.jpg.png) no-repeat;
-  background-position: 90% 50%;
-  background-size: 100%;
+  background: #000 url(../images/focus_img_001.png) no-repeat;
+  background-position: 100% 100%;
+  background-size: 90%;
 }
 .focus h3 {
-  font-size: 25px;
+  word-break: keep-all;
+  font-size: 1.5rem;
   margin-bottom: 40px;
 }
 .focus p {
+  font-size: 0.8rem;
   font-weight: 200;
+  word-break: keep-all;
 }
 .viewmore_btn {
   margin-top: 100px;
   border: 3px solid #fff;
-
   display: grid;
   place-items: center;
   height: 50px;
@@ -238,7 +253,7 @@ main .txt_box .small_txt {
 }
 .global_img {
   width: 100%;
-  height: 30vh;
+  height: 25rem;
   background: no-repeat 50% / cover;
   margin: 20px 0;
 }
@@ -266,7 +281,7 @@ main .txt_box .small_txt {
 .management {
   background-color: #a6988d;
   padding: 88px 38px 120px;
-  height: 1750px;
+  height: 95rem;
   position: relative;
 }
 .management h2 {
@@ -274,12 +289,9 @@ main .txt_box .small_txt {
   color: #fff;
   margin-bottom: 80px;
 }
-#circle {
-  height: 800px;
-}
 .management #circle li {
-  width: 400px;
-  height: 400px;
+  width: 19rem;
+  height: 19rem;
   border-radius: 50%;
   border-style: solid;
   border-color: #fff;
@@ -292,20 +304,21 @@ main .txt_box .small_txt {
 .management h4 {
   width: 100%;
   text-align: center;
-  font-size: 20px;
+  font-size: 1.1rem;
   font-weight: 900;
   color: #fff;
-  margin-top: -10px;
+  padding: 1rem 2rem 0;
+  margin-top: 1rem;
 }
 .management .txt2 {
-  padding: 25px 15px 0;
+  padding: 2rem;
   color: #fff;
-  font-size: 15px;
+  font-size: 0.9rem;
   text-align: center;
   font-weight: 300;
+  line-height: 1.5;
 }
 /* value */
-
 .value {
   width: 100%;
   position: absolute;
@@ -315,11 +328,15 @@ main .txt_box .small_txt {
   background-color: #212529;
   color: #fff;
   text-align: center;
-  font-size: 16px;
+  font-size: 0.9rem;
   font-weight: 300;
 }
+.value p {
+  padding: 0 1.5rem;
+}
 .value h2 {
-  font-size: 25px;
+  font-size: 1.56rem;
+  letter-spacing: 0.1px;
   margin-bottom: 20px;
 }
 .value_btn {
@@ -335,9 +352,13 @@ main .txt_box .small_txt {
   font-weight: 200;
   color: #fff;
 }
+.block {
+  display: block;
+}
 /* change */
 .change {
   padding: 88px 38px 0px;
+  letter-spacing: -1px;
 }
 .change .chage_img {
   width: 100%;
@@ -369,7 +390,7 @@ main .txt_box .small_txt {
   width: 100%;
   height: 1px;
   border-bottom: 1px solid black;
-  margin: 15px 0 15px;
+  margin: 25px 0 15px;
 }
 /* r&d */
 .research {
@@ -380,10 +401,9 @@ main .txt_box .small_txt {
 }
 .research .img_research {
   width: 100%;
-  height: 400px;
+  height: 25rem;
   background: url(../images/img3_research.jpg) no-repeat 0% / cover;
   position: relative;
-
   z-index: 9;
 }
 .research_btn1,
@@ -421,6 +441,7 @@ main .txt_box .small_txt {
   font-size: 14px;
   padding-bottom: 80px;
   line-height: 1.6;
+  font-weight: 300;
 }
 #research_intro li:nth-child(3) {
   width: 140px;
@@ -474,7 +495,7 @@ main .txt_box .small_txt {
 /* footer */
 footer {
   width: 100%;
-  height: 190px;
+  height: 13rem;
   background-color: #000;
   position: relative;
 }
@@ -485,7 +506,7 @@ footer p {
 }
 footer .pf_box {
   background-color: #eee;
-  width: 313px;
+  width: 13.5rem;
   height: 40px;
   margin: 0 auto;
   text-align: center;
@@ -495,8 +516,8 @@ footer .go_up {
   display: block;
   width: 30px;
   height: 30px;
-  background: url(../images/arrow_footer.png) 50% / cover;
+  background: url(../images/arrow_goup.svg) 50% / cover;
   position: absolute;
   right: 30px;
-  bottom: 30px;
+  bottom: 50px;
 }
