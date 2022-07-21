@@ -29,8 +29,8 @@ header .navigator a:hover {
 }
 
 main {
-  margin-top: -100px;
-  height: 850px;
+  margin-top: -80px;
+  height: 100vh;
   background: url(../images/main_1.png) no-repeat 50% / cover;
   display: grid;
   place-items: center;
@@ -105,14 +105,15 @@ main .txt_box p {
   padding: 88px 150px 10px;
 }
 .wrap_focus {
-  padding: 70px 150px 10px;
+  padding: 120px 150px 10px;
   background: #000 url(../images/img2_focus.jpg.png) no-repeat;
   background-position: 100% 50%;
   background-size: 40%;
 }
 .wrap_focus h3 {
   font-size: 1.875rem;
-  font-weight: 700;
+  font-weight: 500;
+  padding-left: 2rem;
 }
 .wrap_focus p {
   width: 800px;
@@ -130,6 +131,13 @@ main .txt_box p {
   font-weight: 500;
 }
 /* global */
+.global_img {
+  height: 25rem;
+  cursor: pointer;
+}
+.global_img:hover {
+  filter: grayscale(0.8);
+}
 #global_wrap {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -137,7 +145,7 @@ main .txt_box p {
   padding: 88px 150px 10px;
 }
 .global {
-  padding: 0 0 40px 0;
+  padding: 0 0 100px 0;
 }
 /* management */
 .management {
@@ -185,23 +193,25 @@ main .txt_box p {
 }
 .value {
   width: 80%;
-  padding: 20px 0;
-  margin: 0;
+  padding: 40px 0 150px;
+  margin: 20px;
   height: 280px;
 }
 .management .value .title {
   text-align: center;
-  margin: 20px auto 40px;
+  margin: 10px auto 40px;
 }
-.value_btn {
-  padding: 0;
-}
+
 .value .small {
   padding: 0;
   margin: 0;
 }
 .value p {
+  padding: 0 0 20px 0;
+}
+.value_btn {
   padding: 0;
+  margin: 0 auto;
 }
 
 /* change */
@@ -245,7 +255,7 @@ main .txt_box p {
 }
 .research #research_intro {
   top: 100px;
-  padding: 20px 200px;
+  padding: 20px 300px;
 }
 .research #research_intro li:nth-child(1) {
   line-height: 1.6;
@@ -261,4 +271,17 @@ main .txt_box p {
   width: 100%;
   background-color: #fff;
   padding: 100px 200px 180px;
+}
+.location h6 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: inline-block;
+  width: 100px;
+}
+.location p {
+  padding-left: 30px;
+  font-size: 1.2rem;
+  margin: 2px 0;
+  font-weight: 400;
+  display: inline-block;
 }
