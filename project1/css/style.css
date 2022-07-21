@@ -42,7 +42,7 @@ header h1 {
   width: 150px;
   position: absolute;
   top: 50%;
-  left: 4%;
+  left: 4vw;
   transform: translateY(-50%);
 }
 header h1 img,
@@ -51,7 +51,7 @@ header #gnb img {
 }
 header #gnb {
   position: absolute;
-  right: 6vw;
+  right: 4vw;
   top: 50%;
   transform: translateY(-50%);
 }
