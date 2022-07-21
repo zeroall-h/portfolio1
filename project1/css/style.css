@@ -124,7 +124,7 @@ main .txt_box .small_txt {
   position: relative;
   filter: grayscale(1);
   background-position: 50%;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .image1 {

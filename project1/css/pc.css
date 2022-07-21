@@ -4,7 +4,8 @@ header {
   height: 80px;
 }
 header h1 {
-  width: 18rem;
+  width: 16rem;
+  left: 6%;
 }
 header #gnb {
   display: none;
@@ -13,13 +14,13 @@ header .navigator {
   display: flex;
   position: absolute;
   top: 50%;
-  right: 6vw;
+  right: 5%;
   transform: translateY(-50%);
 }
 header .navigator a {
   display: block;
-  width: 180px;
-  font-size: 20px;
+  margin: 0 1.3rem;
+  font-size: 1.25rem;
   font-weight: bold;
   color: #0e4194;
 }
@@ -36,11 +37,16 @@ main {
   position: relative;
 }
 
+main .txt_box p {
+  padding: 0rem 3rem;
+  font-size: 3rem;
+  line-height: 1.4;
+}
 /* 비즈니스 */
 .business {
   width: 100%;
   background-color: #f8f9fa;
-  padding: 88px 150px 40px;
+  padding: 88px 150px 0px;
 }
 .bg_scale {
   height: 20vw;
@@ -52,8 +58,8 @@ main {
 }
 .business .txt1 {
   position: absolute;
-  bottom: 3rem;
-  left: 3rem;
+  bottom: 2rem;
+  left: 2rem;
   transition: 0.5s;
   font-weight: 500;
   font-size: 1.2rem;
@@ -72,26 +78,26 @@ main {
 }
 #stand {
   padding-top: 30px;
-  display: flex;
-
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 45px;
 }
 
 #stand li:nth-child(1) {
-  border-top: 1px solid #000;
+  border-top: 3px solid #000;
 }
 #stand .standard_subtitle {
   padding: 20px 2.5rem;
-  font-size: 1.875rem;
+  font-size: 1.6rem;
 }
 #stand li {
-  font-size: 1.125rem;
-  width: 28rem;
-  border-top: 1px solid #000;
-  padding: 30px 0px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 1rem;
+  border-top: 3px solid #000;
 }
 #stand .txt1 {
-  padding: 80px 2.5rem;
+  padding: 60px 2.5rem;
   border-bottom: 2px solid #000;
 }
 /* focus */
@@ -102,24 +108,27 @@ main {
   padding: 70px 150px 10px;
   background: #000 url(../images/img2_focus.jpg.png) no-repeat;
   background-position: 100% 50%;
-  background-size: 60%;
+  background-size: 40%;
 }
 .wrap_focus h3 {
   font-size: 1.875rem;
   font-weight: 700;
 }
 .wrap_focus p {
+  width: 800px;
   padding-left: 2.813rem;
   font-size: 1.125rem;
 }
 .focus .viewmore_btn {
   margin-left: 2.813rem;
   margin-top: 80px;
-  border: 3px solid #fff;
+  border: 2px solid #fff;
   display: grid;
   place-items: center;
 }
-
+.focus .viewmore_btn a {
+  font-weight: 500;
+}
 /* global */
 #global_wrap {
   grid-template-columns: repeat(3, 1fr);
@@ -138,6 +147,11 @@ main {
 }
 .management h2 {
   padding-bottom: 3rem;
+  width: 400px;
+  margin: 0 auto 70px;
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: 1.1;
 }
 .management #circle {
   position: relative;
@@ -171,7 +185,25 @@ main {
 }
 .value {
   width: 80%;
+  padding: 20px 0;
+  margin: 0;
+  height: 280px;
 }
+.management .value .title {
+  text-align: center;
+  margin: 20px auto 40px;
+}
+.value_btn {
+  padding: 0;
+}
+.value .small {
+  padding: 0;
+  margin: 0;
+}
+.value p {
+  padding: 0;
+}
+
 /* change */
 .change {
   padding: 88px 200px 40px;
@@ -209,22 +241,24 @@ main {
   padding: 0;
 }
 .research .img_research {
-  height: 300px;
+  height: 28rem;
 }
 .research #research_intro {
-  top: 20px;
+  top: 100px;
   padding: 20px 200px;
 }
 .research #research_intro li:nth-child(1) {
   line-height: 1.6;
+
   padding-bottom: 20px;
 }
 .research #research_intro li:nth-child(2) {
-  padding-bottom: 30px;
+  padding-bottom: 50px;
+  width: 700px;
 }
 /* location */
 .location {
   width: 100%;
   background-color: #fff;
-  padding: 88px 200px 60px;
+  padding: 100px 200px 180px;
 }
