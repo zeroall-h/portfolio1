@@ -278,6 +278,7 @@ main .txt_box p {
   display: inline-block;
   width: 100px;
   padding-left: 2px;
+  padding-top: 4px;
 }
 .location p {
   padding-left: 30px;
