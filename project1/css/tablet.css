@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 /* main */
+
 main .txt_box {
   padding: 2.5rem 3rem;
   width: auto;
@@ -132,4 +133,8 @@ footer .go_up {
 }
 footer .go_up:hover {
   background-color: rgba(166, 152, 141, 0.6);
+}
+footer p {
+  padding-top: 60px;
+  padding-bottom: 40px;
 }

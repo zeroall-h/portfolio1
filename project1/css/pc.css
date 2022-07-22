@@ -46,14 +46,14 @@ main .txt_box p {
 .business {
   width: 100%;
   background-color: #f8f9fa;
-  padding: 88px 150px 0px;
+  padding: 88px 150px 50px;
 }
 .bg_scale {
   height: 20vw;
 }
 .business .wrap {
   display: grid;
-  grid-gap: 0px;
+  grid-gap: 0;
   grid-template-columns: repeat(4, 1fr);
 }
 .business .txt1 {
@@ -277,11 +277,12 @@ main .txt_box p {
   font-weight: bold;
   display: inline-block;
   width: 100px;
+  padding-left: 2px;
 }
 .location p {
   padding-left: 30px;
   font-size: 1.2rem;
-  margin: 2px 0;
+  padding-top: 2px;
   font-weight: 400;
   display: inline-block;
 }
