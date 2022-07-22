@@ -2,19 +2,21 @@
 
 /* 공통 */
 body {
-  font-family: "Noto Sans KR";
+  font-family: "Noto Sans KR", "나눔고딕", "맑은 고딕", sans-serif;
   line-height: 1.8;
-}
-.enter {
-  display: block;
 }
 a {
   color: #000;
+}
+.enter {
+  display: block;
 }
 .title {
   font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: -0.15rem;
+  padding-left: 20px;
+  padding-bottom: 15px;
 }
 .title_line {
   width: 100%;
@@ -51,12 +53,12 @@ header #gnb img {
 }
 header #gnb {
   position: absolute;
-  right: 4vw;
   top: 50%;
+  right: 4vw;
   transform: translateY(-50%);
 }
 header #gnb img {
-  width: 20px;
+  width: 30px;
 }
 header .navigator {
   display: none;
@@ -107,10 +109,7 @@ main .txt_box .small_txt {
 .business {
   width: 100%;
   background-color: #f8f9fa;
-  padding: 88px 38px 38px;
-}
-.business h2 {
-  padding-bottom: 15px;
+  padding: 80px 5px 38px;
 }
 .business .wrap {
   display: grid;
@@ -127,7 +126,6 @@ main .txt_box .small_txt {
   background-size: 100%;
   background-repeat: no-repeat;
 }
-
 .image1 {
   background-image: url(../images/business_img_001.png);
 }
@@ -179,7 +177,7 @@ main .txt_box .small_txt {
 
 /* our standards */
 .standards {
-  padding: 88px 38px 38px;
+  padding: 80px 5px 38px;
 }
 #stand {
   display: grid;
@@ -214,10 +212,10 @@ main .txt_box .small_txt {
 
 /* focus */
 .focus h2 {
-  padding: 50px 38px 10px;
+  padding: 50px 5px 10px 20px;
 }
 .wrap_focus {
-  padding: 100px 60px 10px;
+  padding: 100px 40px 10px;
   width: 100%;
   height: 600px;
   color: #fff;
@@ -235,22 +233,21 @@ main .txt_box .small_txt {
   font-weight: 200;
   word-break: keep-all;
 }
-.viewmore_btn {
-  margin-top: 100px;
-  border: 3px solid #fff;
+
+.focus a {
+  margin-top: 50px;
+  color: #fff;
   display: grid;
   place-items: center;
+  width: 150px;
+
   height: 50px;
-  width: 160px;
+  border: 3px solid #fff;
 }
-.viewmore_btn a {
-  display: block;
-  font-weight: 200;
-  color: #fff;
-}
+
 /* global */
 .global {
-  padding: 88px 38px 100px;
+  padding: 80px 5px 50px;
 }
 .global_img {
   width: 100%;
@@ -281,7 +278,7 @@ main .txt_box .small_txt {
 /* management */
 .management {
   background-color: #a6988d;
-  padding: 88px 38px 120px;
+  padding: 80px 5px 120px;
   height: 95rem;
   position: relative;
 }
@@ -341,25 +338,28 @@ main .txt_box .small_txt {
   margin-bottom: 20px;
   font-weight: 600;
 }
-.value_btn {
-  margin: 40px auto 20px;
+
+.value_btn a {
+  display: block;
+  margin: 10px auto 0px;
   border: 3px solid #fff;
   display: grid;
   place-items: center;
   height: 50px;
   width: 160px;
-}
-.value_btn a {
-  display: block;
-  font-weight: 200;
+  font-weight: 500;
   color: #fff;
+}
+.value_btn a:hover {
+  color: #212529;
+  background-color: #fff;
 }
 .block {
   display: block;
 }
 /* change */
 .change {
-  padding: 88px 38px 0px;
+  padding: 80px 5px 38px;
   letter-spacing: -1px;
 }
 .change .chage_img {
@@ -374,6 +374,10 @@ main .txt_box .small_txt {
   background: url(../images/change_2.png) no-repeat 50% / cover;
   margin: 30px 0;
 }
+.change .txt_wrap1,
+.change .txt_wrap {
+  margin: 0 40px 50px;
+}
 .change h5 {
   font-size: 20px;
   font-weight: 700;
@@ -383,7 +387,11 @@ main .txt_box .small_txt {
   line-height: 1.8;
 }
 .change a {
+  display: block;
   text-decoration: underline;
+}
+.change a:hover {
+  color: #0e4194;
 }
 .change .mid_line {
   padding: 35px 0;
@@ -396,7 +404,7 @@ main .txt_box .small_txt {
 }
 /* r&d */
 .research {
-  padding: 0px 38px 60px;
+  padding: 0px 5px 38px;
 }
 .research_btn {
   position: relative;
@@ -427,6 +435,7 @@ main .txt_box .small_txt {
   border-width: 1px;
   transform: translateX(-120%);
 }
+
 .research #research_intro {
   position: absolute;
   top: 20px;
@@ -451,17 +460,22 @@ main .txt_box .small_txt {
   background-color: #eee;
   border-radius: 2px;
 }
+
 #research_intro li:nth-child(3) a {
   font-size: 14px;
   display: block;
   padding: 10px;
+}
+#research_intro li:nth-child(3) a:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 /* location */
 .location {
   width: 100%;
   background-color: #fff;
-  padding: 0px 38px 60px;
+  padding: 80px 5px 38px;
 }
 .location .office {
   padding-top: 20px;
@@ -481,7 +495,7 @@ main .txt_box .small_txt {
 .location .address li {
   border-bottom: 1px solid #ddd;
   height: 84px;
-  padding: 10px 0;
+  margin: 20px 40px;
 }
 .location .office li:nth-child(1) {
   border-bottom: 2px solid #000;
@@ -492,9 +506,8 @@ main .txt_box .small_txt {
   font-weight: bold;
 }
 .location p {
-  padding-left: 10px;
-  margin: 0;
   font-weight: 400;
+  padding-left: 10px;
   padding-bottom: 20px;
 }
 /* footer */
@@ -519,6 +532,12 @@ footer .pf_box {
   text-align: center;
   line-height: 40px;
 }
+footer .pf_box:hover a {
+  display: block;
+  color: #fff;
+  background-color: lightskyblue;
+}
+
 footer .go_up {
   display: block;
   width: 30px;
