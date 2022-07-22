@@ -101,8 +101,7 @@ main a:nth-of-type(2) {
   bottom: 10px;
 }
 main .txt_box .small_txt {
-  font-size: 0.8rem;
-  font-weight: 200;
+  display: none;
 }
 /* business */
 .business {
