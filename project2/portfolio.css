@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+body {
+  font-family: "Noto Sans KR", "나눔고딕", "맑은 고딕", sans-serif;
+}
+
+#contact {
+  width: 100%;
+  height: 679px;
+  background: #ddd url(./images/footerBackground.png) no-repeat 50% / cover;
+  text-align: center;
+}
+#contact h2 {
+  padding: 120px 0 48px 0;
+  font-size: 80px;
+  font-weight: 500;
+}
+#contact h3 {
+  font-size: 30px;
+  font-weight: 400;
+}
+.contactBtn {
+  display: flex;
+}
+.contactBtn li a {
+  width: 305px;
+  height: 89px;
+  border-radius: 44.5px;
+  color: #000;
+  display: block;
+  background-color: #fff;
+}
+
+footer {
+  width: 100%;
+
+  background-color: #000;
+
+  font-size: 1.875rem;
+  color: #fff;
+
+  display: grid;
+  place-items: center;
+  padding: 30px 20px;
+}
