@@ -3,34 +3,381 @@
 body {
   font-family: "Noto Sans KR", "나눔고딕", "맑은 고딕", sans-serif;
 }
+/* 공통 스타일 */
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 200;
+}
+.line {
+  width: 100%;
+  height: 0.5px;
+  background-color: #000;
+  margin-top: 20px;
+  margin-bottom: 56px;
+}
+.decoration_title {
+  font-weight: 700;
+  font-size: 50px;
+}
+.decoration_title_color {
+  font-family: "Franklin Gothic Medium";
+  font-size: 50px;
+  font-style: italic;
+  color: skyblue;
+  font-weight: 500;
+}
+.block {
+  display: block;
+}
+/* header */
+header {
+  width: 100%;
+  min-width: 980px;
+  height: 80px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 9999;
+}
+header h1 {
+  width: 164px;
+  height: 53px;
+  text-indent: -9999px;
+  background: url(./images/header_logo.png);
+  margin-left: 24px;
+}
+header #gnb {
+  display: flex;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 30px;
+  margin: 0 auto;
+  line-height: 45px;
+}
+header #gnb a {
+  display: block;
+  color: #000;
+  width: 100px;
+  transition: 0.5s;
+}
+header #gnb a:hover {
+  color: blue;
+  transform: translateX(-10px);
+}
+header #gnb li:last-child a {
+  position: absolute;
+  right: 30px;
+  width: 147px;
+  height: 45px;
+  border-radius: 22.5px;
+  background-color: #000;
+  color: #fff;
+  transition: 0.5s;
+}
+header #gnb li:last-child:hover a {
+  transform: scale(1.1);
+}
+/* main */
+.mainBox {
+  width: 96.875%;
+  height: 830px;
+  background: url(./images/main_background.png) no-repeat 50% / cover;
+  margin: 80px auto 110px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+.mainBox h2 {
+  font-family: "Founders Grotesk";
+  font-weight: 500;
+  font-size: 120px;
+  padding-top: 220px;
+  margin-bottom: 50px;
+}
+.mainBox h3 {
+  font-size: 25px;
+  font-weight: 300;
+  position: relative;
+  z-index: 999;
+}
+.mainBox .scrollDown {
+  margin: 100px auto 0;
+  width: 98px;
+  height: 99px;
+  background: url(./images/scrolldown.png);
+  animation: rotate_image 6s linear infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes rotate_image {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 
+/* aboutme */
+.aboutMe {
+  padding: 0 90px;
+}
+.aboutMe .sectionTitle {
+  padding: 0;
+}
+.emoji_wrap {
+  width: 524px;
+  height: 526px;
+  position: relative;
+  margin-left: 145px;
+}
+.emoji_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 405px;
+  height: 528px;
+  background: url(./images/emoji_background.png) no-repeat 50% / cover;
+}
+.emoji {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 386px;
+  height: 429px;
+  background: url(./images/emoji.png) no-repeat 50% / cover;
+}
+
+.aboutMe h2 {
+  font-size: 35px;
+  font-weight: 700;
+}
+.intro {
+  font-size: 20px;
+}
+.intro li {
+  background-color: aquamarine;
+}
+.txt_wrap {
+  font-size: 16px;
+}
+/* project */
+.sectionTitle,
+.decoration_title {
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+.projectBox {
+  margin-top: 60px;
+}
+.projectBox > li {
+  width: 100%;
+  height: 842px;
+  background-color: #000;
+  border-radius: 60px;
+  color: #fff;
+  padding: 90px;
+}
+.projectBox p {
+  font-size: 30px;
+  font-family: Montserrat;
+  font-style: italic;
+  padding-bottom: 60px;
+}
+.projectBox .projectTxt {
+  font-style: normal;
+}
+.projectWrap {
+  width: 1400px;
+  height: 534px;
+  margin: 0 auto;
+  min-width: 1000px;
+  position: relative;
+}
+.projectbg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  width: 662px;
+  height: 495px;
+}
+.projectbg1 {
+  background: url(./images/project_img1.png) no-repeat 50% / cover;
+}
+.projectbg2 {
+  background: url(./images/project_img2.png) no-repeat 50% / cover;
+}
+.projectbg3 {
+  background: url(./images/project_img3.png) no-repeat 50% / cover;
+}
+.projectExplain {
+  position: absolute;
+  display: grid;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 800px;
+}
+
+.projectExplain li {
+  font-size: 45px;
+  font-weight: 700;
+}
+.projectExplain li.smallTxt {
+  font-size: 20px;
+  font-weight: 300;
+  padding: 46px 0 76px;
+}
+.projectExplain .viewMoreBtn {
+  width: 226px;
+  height: 65px;
+  border-radius: 30px;
+  background-color: #fff;
+  display: grid;
+  place-content: center;
+  color: #000;
+  font-size: 25px;
+}
+.projectExplain .viewMoreBtn:hover {
+  color: #fff;
+  background-color: burlywood;
+  cursor: pointer;
+}
+/* skill */
+#skill {
+  width: 100%;
+  height: 900px;
+  background-color: #f3f3f1;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  padding: 90px;
+}
+.skillList {
+  width: 86%;
+  display: flex;
+  justify-content: space-between;
+  margin: 65px auto 0px;
+}
+.skillList li {
+  width: 24%;
+  height: 439px;
+  border-radius: 36px;
+  background-color: #fff;
+  padding: 40px;
+}
+.skillList li img {
+  width: 30px;
+}
+.skillList .imgbox {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background-color: #e9c0ea;
+  display: grid;
+  place-content: center;
+}
+.skillList li h2 {
+  padding-top: 45px;
+  font-size: 28px;
+  font-weight: 700;
+  padding-bottom: 40px;
+}
+.skillList li {
+  font-size: 16px;
+  font-weight: 300;
+}
+.skillList .skillList_text li {
+  width: 100%;
+  padding: 0;
+  height: auto;
+}
+
+/* Thank you for watching */
+.marquee {
+  width: 100%;
+  height: 150px;
+  background-color: #000;
+  color: #fff;
+  font-size: 80px;
+  overflow: hidden;
+  position: relative;
+}
+.marquee div {
+  display: block;
+  line-height: 150px;
+  width: 200%;
+  height: 150px;
+  position: absolute;
+  overflow: hidden;
+  animation: marquee 5s linear infinite forwards;
+}
+.marquee span {
+  padding: 20px 30px;
+}
+.marquee span.decoTxt {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-style: italic;
+  color: palegoldenrod;
+}
+
+@keyframes marquee {
+  0% {
+    left: 10%;
+  }
+  100% {
+    left: -80%;
+  }
+}
+/* 컨택 */
 #contact {
   width: 100%;
-  height: 679px;
-  background: #ddd url(./images/footerBackground.png) no-repeat 50% / cover;
+  height: 550px;
+  background: url(./images/footerBackground.png) no-repeat 50% / cover;
   text-align: center;
 }
 #contact h2 {
-  padding: 120px 0 48px 0;
+  padding: 90px 0 10px 0;
   font-size: 80px;
   font-weight: 500;
 }
 #contact h3 {
   font-size: 30px;
   font-weight: 400;
+  padding-bottom: 80px;
 }
 .contactBtn {
+  width: 1045px;
   display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.contactBtn li img {
+  display: block;
+  padding-right: 15px;
+  transition: 0.5s;
 }
 .contactBtn li a {
   width: 305px;
   height: 89px;
   border-radius: 44.5px;
+
   color: #000;
-  display: block;
+  font-size: 30px;
   background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactBtn li a:hover {
+  text-decoration: underline;
+}
+.contactBtn li a:hover > img {
+  transform: rotate(10deg);
 }
 
+/* 푸터 */
 footer {
   width: 100%;
 
