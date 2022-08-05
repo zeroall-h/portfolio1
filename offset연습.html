@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../common/minireset.css" />
     <style>
       body {
-        height: 300vh;
+        height: 400vh;
         position: relative;
       }
       header {
@@ -24,26 +24,29 @@
       .box li:nth-child(1) {
         background-color: red;
         width: 100%;
-        height: 800px;
+        height: 400px;
         z-index: 9;
       }
       .box li:nth-child(2) {
         background-color: blue;
-        height: 800px;
+        height: 400px;
         z-index: 99;
         width: 100%;
       }
       .box li:nth-child(3) {
         background-color: black;
-        height: 800px;
+        height: 400px;
         z-index: 999;
-        position: fixed;
-        top: 1300px;
+
         width: 100%;
       }
       .box li.fixed {
         position: fixed;
         top: 0;
+      }
+      .box li.fixed1 {
+        position: fixed;
+        top: 50px;
       }
     </style>
   </head>
@@ -57,11 +60,19 @@
     <script>
       const lis = document.querySelectorAll("li");
       addEventListener("scroll", () => {
-        let lisHt = lis[0].offsetTop;
-        if (scrollY >= lisHt && scrollY <= lisHt + 800) {
+        let lisHt1 = lis[0].offsetTop;
+        let lisHt2 = lis[1].offsetTop;
+        let lisHt3 = lis[2].offsetTop;
+        if (scrollY >= lisHt1) {
           lis[0].classList.add("fixed");
-        } else if (scrollY > lisHt + 800) {
+          if (scrollY >= lisHt2 && scrollY < lisHt3) {
+            lis[1].classList.add("fixed1");
+          }
+        } else if (scrollY >= lisHt3) {
           lis[0].classList.remove("fixed");
+        } else {
+          lis[0].classList.remove("fixed");
+          lis[1].classList.remove("fixed1");
         }
       });
     </script>
