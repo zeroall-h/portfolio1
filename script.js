@@ -16,3 +16,13 @@ window.addEventListener("mousemove", function (e) {
     document.body.removeChild(to_append);
   }
 });
+
+const header = document.querySelector("header");
+
+addEventListener("scroll", () => {
+  if (scrollY > 0) {
+    header.style.backgroundColor = "#fff";
+  } else {
+    header.style.backgroundColor = "transparent";
+  }
+});

@@ -38,7 +38,7 @@ header {
   width: 100%;
   min-width: 980px;
   height: 80px;
-  background-color: #fff;
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,22 +62,18 @@ header #gnb {
   font-size: 20px;
   text-align: center;
   margin-right: 30px;
-  margin: 0 auto;
   line-height: 45px;
 }
 header #gnb a {
   display: block;
   color: #000;
   width: 100px;
-  transition: 0.5s;
 }
 header #gnb a:hover {
-  color: blue;
-  transform: translateX(-10px);
+  color: rgb(63, 94, 251);
 }
 header #gnb li:last-child a {
-  position: absolute;
-  right: 30px;
+  margin-left: 20px;
   width: 147px;
   height: 45px;
   border-radius: 22.5px;
@@ -85,15 +81,21 @@ header #gnb li:last-child a {
   color: #fff;
   transition: 0.5s;
 }
+
 header #gnb li:last-child:hover a {
-  transform: scale(1.1);
+  color: #fff;
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
 }
 /* main */
 .mainBox {
   width: 96.8%;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 100px);
   background: url(./images/main_background.png) no-repeat 50% / cover;
-  margin: 5.208333333333333vw auto 110px;
+  margin: 80px auto 110px;
   color: #fff;
   text-align: center;
   position: relative;
@@ -122,16 +124,15 @@ header #gnb li:last-child:hover a {
 .mainBox .scrollDown {
   position: absolute;
   bottom: 7%;
-  left: 49%;
+  left: 50%;
   width: 98px;
   height: 99px;
-  background: url(./images/scrolldown.png);
-  animation: rotate_image 6s linear infinite;
-  transform-origin: 50% 50%;
+  background: url(./images/arrow.svg) no-repeat;
+  animation: ani_image 2s linear infinite alternate-reverse;
 }
-@keyframes rotate_image {
+@keyframes ani_image {
   100% {
-    transform: rotate(-360deg);
+    transform: translateY(10px);
   }
 }
 
@@ -204,11 +205,17 @@ header #gnb li:last-child:hover a {
 }
 .projectBox > li {
   width: 100%;
-  height: 842px;
+  height: 700px;
   background-color: #000;
   border-radius: 60px;
   color: #fff;
   padding: 90px;
+  position: sticky;
+  top: 80px;
+}
+.projectBox > li:last-child {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .project .line1 {
   width: 80%;
@@ -217,19 +224,18 @@ header #gnb li:last-child:hover a {
   margin: 20px auto 56px;
 }
 .projectBox p {
-  font-size: 30px;
+  font-size: 20px;
   font-family: Montserrat;
   font-style: italic;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 }
 .projectBox .projectTxt {
   font-style: normal;
 }
 .projectWrap {
-  width: 70%;
-  height: 534px;
+  width: 80%;
+  height: 500px;
   margin: 0 auto;
-  min-width: 1000px;
   position: relative;
 }
 .projectbg {
@@ -255,17 +261,18 @@ header #gnb li:last-child:hover a {
   width: 33vw;
   top: 50%;
   transform: translateY(-50%);
-  left: 38vw;
+  right: -100px;
 }
 span.decoration {
   color: skyblue;
 }
 .projectExplain li {
-  font-size: 45px;
+  font-size: 40px;
   font-weight: 700;
+  word-break: keep-all;
 }
 .projectExplain li.smallTxt {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
   padding: 46px 0 76px;
 }
@@ -321,7 +328,7 @@ span.decoration {
   padding-top: 2.9296875vw;
   font-size: 1.4vw;
   font-weight: 700;
-  padding-bottom: 2.6041666666666665vw;
+  padding-bottom: 2vw;
 }
 .skillList li {
   font-size: 1.0416666666666667vw;
