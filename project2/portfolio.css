@@ -1,7 +1,11 @@
 @charset "utf-8";
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Noto Sans KR", "나눔고딕", "맑은 고딕", sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 /* 공통 스타일 */
 .sectionTitle {
@@ -86,7 +90,7 @@ header #gnb li:last-child:hover a {
 }
 /* main */
 .mainBox {
-  width: 96.875%;
+  width: 96.8%;
   height: calc(100vh - 80px);
   background: url(./images/main_background.png) no-repeat 50% / cover;
   margin: 5.208333333333333vw auto 110px;
@@ -96,20 +100,29 @@ header #gnb li:last-child:hover a {
   overflow: hidden;
 }
 .mainBox h2 {
+  width: 90%;
   font-family: "Familjen Grotesk", sans-serif;
   font-weight: 500;
   font-size: 5.510416666666667vw;
-  padding-top: 9vw;
-  margin-bottom: 3.2552083333333335vw;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
 }
 .mainBox h3 {
   font-size: 1.6276041666666667vw;
   font-weight: 300;
-  position: relative;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 999;
 }
 .mainBox .scrollDown {
-  margin: 5.510416666666667vw auto 0;
+  position: absolute;
+  bottom: 7%;
+  left: 49%;
   width: 98px;
   height: 99px;
   background: url(./images/scrolldown.png);
