@@ -48,6 +48,9 @@ header.active {
   background: #fff;
   height: 60px;
 }
+main.active {
+  margin-top: -60px;
+}
 /* 비즈니스 */
 .business {
   width: 100%;
