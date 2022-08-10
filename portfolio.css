@@ -8,6 +8,9 @@ body {
   overflow-y: auto;
 }
 /* 공통 스타일 */
+a {
+  color: inherit;
+}
 .sectionTitle {
   font-size: 20px;
   font-weight: 200;
@@ -239,7 +242,7 @@ header #gnb li:last-child:hover a {
 }
 .projectbg {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   left: 10px;
   width: 34.479vw;
@@ -258,7 +261,7 @@ header #gnb li:last-child:hover a {
   position: absolute;
   display: grid;
   width: 33vw;
-  top: 50%;
+  top: 35%;
   transform: translateY(-50%);
   right: -100px;
 }
@@ -273,7 +276,7 @@ span.decoration {
 .projectExplain li.smallTxt {
   font-size: 18px;
   font-weight: 300;
-  padding: 46px 0 76px;
+  padding: 30px 0 50px;
 }
 .projectExplain .viewMoreBtn {
   width: 226px;
