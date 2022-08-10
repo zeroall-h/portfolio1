@@ -195,14 +195,37 @@ header #gnb a:hover {
   margin-right: 10px;
 }
 #viewMore li a {
-  display: block;
+  display: inline-block;
+  position: relative;
 }
 #viewMore li img {
   width: 40px;
 }
-
-#viewMore li:hover a {
-  text-decoration: underline;
+#viewMore li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #fad84e;
+  transition: all 0.5s;
+}
+#viewMore li a::before {
+  content: "";
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #fad84e;
+  transition: all 0.5s;
+}
+#viewMore a:hover::after {
+  width: 50%;
+}
+#viewMore a:hover::before {
+  width: 50%;
 }
 .highlight {
   background-color: #fad84e;
