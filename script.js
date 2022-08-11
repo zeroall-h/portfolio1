@@ -17,12 +17,11 @@ window.addEventListener("mousemove", function (e) {
   }
 });
 
-const header = document.querySelector("header");
-
-addEventListener("scroll", () => {
+window.addEventListener("scroll", () => {
+  const headerHeight = document.querySelector("header");
   if (scrollY > 0) {
-    header.style.backgroundColor = "#fff";
+    headerHeight.style.backgroundColor = "#fff";
   } else {
-    header.style.backgroundColor = "transparent";
+    headerHeight.style.backgroundColor = "transparent";
   }
 });

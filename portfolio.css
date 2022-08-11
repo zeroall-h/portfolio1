@@ -25,12 +25,16 @@ a {
 .decoration_title {
   font-weight: 700;
   font-size: 50px;
+
+  height: 100px;
 }
 .decoration_title_color {
   font-family: "Alegreya", serif;
   font-size: 50px;
   font-style: italic;
-  color: skyblue;
+  background: linear-gradient(to right top, #845ec2, #2c73d2);
+  color: transparent;
+  -webkit-background-clip: text;
   font-weight: 500;
 }
 .block {
@@ -39,7 +43,6 @@ a {
 /* header */
 header {
   width: 100%;
-  min-width: 980px;
   height: 80px;
   background-color: transparent;
   display: flex;
@@ -93,51 +96,63 @@ header #gnb li:last-child:hover a {
   );
 }
 /* main */
-.mainBox {
+main {
   width: 96.8%;
-  height: calc(100vh - 100px);
+  height: calc(95vh - 100px);
   background: url(./images/main_background.png) no-repeat 50% / cover;
-  margin: 80px auto 110px;
+  margin: 80px auto;
+  position: relative;
+}
+.mainBox {
+  width: 90%;
+  height: 90%;
+  position: absolute;
   color: #fff;
   text-align: center;
-  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
 }
 .mainBox h2 {
-  width: 90%;
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-family: "Familjen Grotesk", sans-serif;
   font-weight: 500;
   font-size: 5.510416666666667vw;
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 999;
 }
 .mainBox h3 {
+  width: 100%;
   font-size: 1.6276041666666667vw;
   font-weight: 300;
   position: absolute;
-  top: 60%;
+  top: 65%;
   left: 50%;
-  transform: translateX(-50%);
-  z-index: 999;
+  transform: translate(-50%, -50%);
 }
 .mainBox .scrollDown {
+  width: 50px;
+  height: 50px;
   position: absolute;
-  bottom: 7%;
   left: 50%;
-  width: 98px;
-  height: 99px;
+  bottom: 5%;
+  transform: translateX(-50%);
   background: url(./images/arrow.svg) no-repeat;
-  animation: ani_image 2s linear infinite alternate-reverse;
+  animation: ani_image 1s ease infinite alternate-reverse;
 }
 @keyframes ani_image {
   100% {
-    transform: translateY(10px);
+    transform: translate(-50%, -10px);
   }
 }
-
 /* aboutme */
 .aboutMe {
   padding: 0px 90px 80px;
@@ -237,7 +252,7 @@ header #gnb li:last-child:hover a {
 .projectWrap {
   width: 80%;
   height: 500px;
-  margin: 0 auto;
+  margin: 20px auto;
   position: relative;
 }
 .projectbg {
@@ -247,6 +262,8 @@ header #gnb li:last-child:hover a {
   left: 10px;
   width: 34.479vw;
   height: 25.781vw;
+  max-width: 512px;
+  max-height: 382px;
 }
 .projectbg1 {
   background: url(./images/project_img1.png) no-repeat 50% / cover;
@@ -296,7 +313,7 @@ span.decoration {
 /* skill */
 #skill {
   width: 100%;
-  height: 900px;
+  height: 100%;
   background-color: #f6f5f1;
   border-top-left-radius: 60px;
   border-top-right-radius: 60px;
@@ -374,7 +391,7 @@ span.decoration {
     left: 0%;
   }
   100% {
-    left: -80%;
+    left: -70%;
   }
 }
 /* 컨택 */
@@ -410,7 +427,6 @@ span.decoration {
   width: 305px;
   height: 89px;
   border-radius: 44.5px;
-
   color: #000;
   font-size: 30px;
   background-color: #fff;
@@ -428,19 +444,16 @@ span.decoration {
 /* 푸터 */
 footer {
   width: 100%;
-
   background-color: #000;
-
-  font-size: 1.875rem;
+  font-weight: 200;
+  font-size: 1.2rem;
   color: #fff;
-
   display: grid;
   place-items: center;
   padding: 30px 20px;
 }
 
 /* 마우스 이벤트 */
-
 .decoTxt {
   color: #fff;
   background: #000;
@@ -497,7 +510,6 @@ footer {
   pointer-events: none;
   mix-blend-mode: multiply;
 }
-
 .loader-container {
   width: 100px;
   height: 100px;
@@ -533,37 +545,6 @@ footer {
   left: 10px;
   top: 10px;
   border-radius: 100%;
-}
-
-@-webkit-keyframes $animationName {
-  50% {
-    -webkit-filter: hue-rotate(1000deg);
-    filter: hue-rotate(1000deg);
-  }
-  100% {
-    -webkit-filter: hue-rotate(2000deg);
-    filter: hue-rotate(2000deg);
-  }
-}
-@-moz-keyframes filterHue2 {
-  50% {
-    -webkit-filter: hue-rotate(1000deg);
-    filter: hue-rotate(1000deg);
-  }
-  100% {
-    -webkit-filter: hue-rotate(2000deg);
-    filter: hue-rotate(2000deg);
-  }
-}
-@-ms-keyframes filterHue2 {
-  50% {
-    -webkit-filter: hue-rotate(1000deg);
-    filter: hue-rotate(1000deg);
-  }
-  100% {
-    -webkit-filter: hue-rotate(2000deg);
-    filter: hue-rotate(2000deg);
-  }
 }
 @keyframes filterHue2 {
   50% {
