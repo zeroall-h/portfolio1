@@ -27,6 +27,10 @@ header .navigator a {
 header .navigator a:hover {
   color: #fff;
 }
+header.active .navigator a:hover {
+  color: brown;
+}
+
 main {
   margin-top: -80px;
   height: 100vh;
@@ -284,26 +288,33 @@ main.active {
   background-color: #fff;
   padding: 100px 200px 180px;
 }
+.location .address {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.location .address li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  height: 70px;
+  margin: 0px;
+}
 .location h6 {
   font-size: 1.3rem;
   font-weight: bold;
   display: inline-block;
   width: 100px;
-  padding-left: 2px;
-  padding-top: 4px;
 }
 .location p {
-  padding-left: 30px;
   font-size: 1.2rem;
-  padding-top: 2px;
-  font-weight: 400;
+  padding: 0;
   display: inline-block;
+  padding-left: 20px;
 }
 
 .change .txt_wrap1,
 .change .txt_wrap {
   margin: 0;
-}
-.address h6 {
-  padding-top: 10px;
 }

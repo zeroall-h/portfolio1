@@ -11,3 +11,16 @@ addEventListener("scroll", () => {
     main.classList.remove("active");
   }
 });
+
+const factory = document.querySelector("#factoryBtn");
+const office = document.querySelector("#officeBtn");
+const map1 = document.querySelector("#map1");
+
+factory.addEventListener("click", (e) => {
+  e.preventDefault();
+  map1.classList.toggle("on");
+});
+office.addEventListener("click", (e) => {
+  e.preventDefault();
+  map.classList.toggle("invisible");
+});

@@ -492,6 +492,18 @@ main .txt_box .small_txt {
 #map {
   margin: 40px 0;
 }
+#map.invisible {
+  display: none;
+  margin: 40px 0;
+}
+#map1 {
+  display: none;
+  margin: 40px 0;
+}
+#map1.on {
+  display: block;
+  margin: 40px 0;
+}
 .location .address li {
   border-bottom: 1px solid #ddd;
   height: 84px;

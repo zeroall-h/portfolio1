@@ -299,12 +299,13 @@
       <h2 class="title">Location</h2>
       <ul class="office">
         <li>
-          <a href="#">OFFICE</a>
+          <a href="#" id="officeBtn">OFFICE</a>
         </li>
 
-        <li><a href="#">FACTORY</a></li>
+        <li><a href="#" id="factoryBtn">FACTORY</a></li>
       </ul>
       <div id="map" style="width: 100%; height: 400px"></div>
+      <div id="map1" style="width: 100%; height: 400px"></div>
 
       <ul class="address">
         <li>
@@ -336,12 +337,17 @@
           Terms of Use / Privacy Policy</span
         >
       </p>
-      <div class="pf_box"><a href="#">Zeroall 포트폴리오 바로가기</a></div>
+      <div class="pf_box">
+        <a href="https://zeroall-h.github.io/portfolio/"
+          >Zeroall 포트폴리오 바로가기</a
+        >
+      </div>
       <a href="#" class="go_up"></a>
     </footer>
     <script>
       // kakao map 실행코드
       var container = document.getElementById("map");
+
       var options = {
         center: new kakao.maps.LatLng(37.5214, 126.9105),
         level: 3,
