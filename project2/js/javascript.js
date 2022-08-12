@@ -18,9 +18,11 @@ const map1 = document.querySelector("#map1");
 
 factory.addEventListener("click", (e) => {
   e.preventDefault();
+  map.style.display = "none";
   map1.classList.toggle("on");
 });
 office.addEventListener("click", (e) => {
   e.preventDefault();
   map.classList.toggle("invisible");
+  map1.classList.remove("on");
 });
