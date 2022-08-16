@@ -1,0 +1,96 @@
+body {
+  font-family: "Arita-dotum-Medium", "나눔고딕", "맑은 고딕", sans-serif;
+}
+a {
+  color: inherit;
+}
+.container {
+  width: 300%;
+  display: flex;
+  justify-content: space-around;
+  transition: all 0.5s;
+}
+.box {
+  height: 100vh;
+  font-size: 100px;
+  line-height: 100vh;
+  text-align: center;
+  box-sizing: border-box;
+}
+.wrap {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.wrap1 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.wrap2 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.video {
+  position: relative;
+  padding-bottom: 73%;
+  height: 0;
+  overflow: hidden;
+  padding-top: 0;
+}
+.video iframe,
+.video object,
+.video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.logo h1 {
+  width: 200px;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+.logo h2 {
+  width: 45px;
+  position: absolute;
+  top: 30px;
+  left: 56px;
+  z-index: 9999;
+}
+.logo .menuBar {
+  color: #fff;
+  z-index: 9999;
+  position: absolute;
+  top: 40px;
+  right: 56px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.logo .menuBar #menuBox {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  margin-left: 10px;
+  display: inline-block;
+}
+.logo .bottom_logo_left {
+  position: absolute;
+  left: 56px;
+  bottom: 30px;
+  z-index: 9999;
+}
+.logo .bottom_logo_right {
+  position: absolute;
+  right: 56px;
+  bottom: 30px;
+  z-index: 9999;
+}

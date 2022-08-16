@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <title>title</title>
+    <link rel="stylesheet" href="../common/minireset.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-size: 2rem;
+        overflow-x: hidden;
+        position: relative;
+        font-family: "Arita-dotum4.0(OTF)";
+      }
+      a {
+        color: inherit;
+      }
+      /* 고정 값 */
+      .logo2 h1 img {
+        width: 200px;
+        position: fixed;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+      }
+      .logo2 h2 img {
+        position: fixed;
+        top: 30px;
+        left: 0;
+        z-index: 9999;
+        width: 45px;
+        margin-left: 40px;
+      }
+      .logo2 .bottom_logo_left {
+        position: fixed;
+        left: 56px;
+        bottom: 30px;
+        z-index: 9999;
+      }
+      .logo2 .bottom_logo_right {
+        position: fixed;
+        right: 56px;
+        bottom: 30px;
+        z-index: 9999;
+      }
+      .logo2 .menuBar {
+        color: #fff;
+        z-index: 9999;
+        position: fixed;
+        top: 40px;
+        right: 56px;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+      .logo2 .menuBar #menuBox {
+        width: 12px;
+        height: 12px;
+        background-color: #fff;
+        margin-left: 10px;
+        display: inline-block;
+      }
+
+      .empty_box {
+        background-color: #ddd;
+        height: 100vh;
+        box-sizing: border-box;
+      }
+      .empty_box:last-of-type {
+        background-color: #999;
+      }
+      h3 {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        position: relative;
+        width: 100%;
+      }
+      .sticky_box {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+      }
+      .horizontal {
+        position: absolute;
+        display: flex;
+        width: 300%;
+        height: 100%;
+      }
+      .horizontal .box {
+        height: 100vh;
+        width: 100%;
+      }
+      .horizontal .row1 {
+        position: relative;
+      }
+      .horizontal .row2 {
+        background-color: #ddd;
+        width: 95%;
+      }
+      .horizontal .row3 {
+        background-color: #f4efe8;
+      }
+      /* 첫번째 페이지 - 아이프레임 */
+      .video {
+        position: relative;
+        padding-bottom: 72.9%;
+        height: 0;
+        overflow: hidden;
+        padding-top: 0;
+      }
+      .video iframe,
+      .video object,
+      .video embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .circle {
+        width: 50px;
+        height: 50px;
+        background: url(./images/header_menu_img.svg) 50% / cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9998;
+      }
+      .circleFont {
+        width: 160px;
+        height: 160px;
+        background: url(./images/box1_circle.png) 50% / cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        animation: rotate_image 12s linear infinite;
+        transform-origin: 50% 50%;
+      }
+      @keyframes rotate_image {
+        100% {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+      /* 두번째 페이지 - 자연과 인간의 정성 */
+      .row2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .row2 .photo1 {
+        width: 600px;
+        height: 600px;
+        background: url(./images/photo1.jpg) 50% / cover;
+        margin-right: 100px;
+      }
+      .row2 ul li {
+        margin: 20px 0;
+      }
+      .row2 ul li:nth-child(1) {
+        margin-bottom: 100px;
+      }
+      .row2 .brandstoryBtn {
+        position: absolute;
+        right: 200px;
+        bottom: 200px;
+        width: 117px;
+        height: 117px;
+        border-radius: 50%;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+      }
+      .row2 .brandstoryBtn:hover {
+        background-color: #000;
+        color: #fff;
+      }
+      /* 공통 폰트 설정 */
+      .title {
+        font-size: 60px;
+        font-weight: bold;
+      }
+      .contentFont {
+        font-family: "Arita-dotum4.0(OTF)";
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 1.8;
+      }
+      .block {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 가로 스크롤 영역 -->
+    <div class="logo2">
+      <h1>
+        <a href="/"
+          ><img src="./images/header_logo_white.png" alt="오설록 로고"
+        /></a>
+      </h1>
+      <h2>
+        <a href="/"
+          ><img src="./images/header_logo_left.png" alt="오설록 심볼마크"
+        /></a>
+      </h2>
+      <div class="bottom_logo_left">
+        <img src="./images/bottom_logo_left.png" alt="하단 오른쪽 꺽쇠" />
+      </div>
+      <div class="bottom_logo_right">
+        <img src="./images/bottom_logo_right.png" alt="하단 오른쪽 꺽쇠" />
+      </div>
+      <div class="menuBar">
+        <a href="#">menu<span id="menuBox"></span></a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="sticky_box">
+        <div class="horizontal">
+          <!-- flex, translateX를 이용해 스크롤-->
+          <div class="box row1">
+            <div class="circleFont"></div>
+            <div class="circle"></div>
+
+            <div class="video">
+              <iframe
+                src="https://player.vimeo.com/video/709357001?color=ffffff&title=0&byline=0&portrait=0&background=1&muted=1&autopause=1#t=0s"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="box row2">
+            <div class="photo1"></div>
+            <ul>
+              <li class="title">
+                자연과 인간의 정성이<span class="block"
+                  >빚어낸 프리미엄 티</span
+                >
+              </li>
+              <li class="contentFont">
+                국내 최대 차 브랜드이자 세계적으로 유명한
+                <span class="block"
+                  >오설록은 차의 생산, 수확, 판매를 아우르는 차와</span
+                >
+                <span class="block">관련된 모든 과정을 통합하고 있습니다.</span>
+              </li>
+
+              <li class="contentFont">
+                오설록은 자연과 인간 모두에게 이로운 기술농법으로
+                <span class="block"
+                  >최고의 녹차를 수확하기 위해 많은 노력을 기울이고 있습니다.
+                </span>
+              </li>
+              <li class="contentFont">
+                전통을 계승하면서도 새로운 트렌드를 수용하여
+                <span class="block"
+                  >최고의 차를 만드는 것이 현대의 기술을 접목하는 것이</span
+                >
+                <span class="block">오설록의 철학입니다.</span>
+              </li>
+            </ul>
+            <a href="#" class="brandstoryBtn">Brand Story</a>
+          </div>
+
+          <div class="box row3">row3</div>
+        </div>
+      </div>
+    </div>
+    <section class="empty_box">
+      <h3>empty_box2</h3>
+    </section>
+    <section class="empty_box">
+      <h3>empty_box3</h3>
+    </section>
+
+    <script>
+      const container = document.querySelector(".container");
+      const stickyBox = document.querySelector(".sticky_box");
+      const horizontal = document.querySelector(".horizontal");
+
+      const calcHeight = (item) => {
+        const clientWidth = document.documentElement.clientWidth;
+        const clientHeight = document.documentElement.clientHeight;
+
+        // horizontal의 숨겨진 영역까지의 가로 크기(전체크기) - 브라우저 가로 크기 + 브라우저의 높이
+        return item.scrollWidth - clientWidth + clientHeight;
+      };
+
+      let conHt = (container.style.height = `${calcHeight(horizontal)}px`);
+      // 스크롤이 될때마다 값을 받아와 가로 이동
+      addEventListener("scroll", () => {
+        console.log("ho", horizontal.offsetTop); // 가장 가까운 포지션을 기준으로 위치값 계산 0
+        console.log("st", stickyBox.offsetTop); // sticky : scroll 기준. offset의 기준도 scroll. sticky 박스를 scroll 박스에 고정되는 지점에서부터 다시 offsetTop의 값이 결정
+        horizontal.style.transform = `translateX(-${stickyBox.offsetTop}px)`;
+      });
+    </script>
+  </body>
+</html>

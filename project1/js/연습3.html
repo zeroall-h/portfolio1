@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <title>title</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-size: 2rem;
+        overflow-x: hidden;
+      }
+      .empty_box {
+        background-color: #ddd;
+        height: 100vh;
+        box-sizing: border-box;
+      }
+      .empty_box:last-of-type {
+        background-color: #999;
+      }
+      h3 {
+        margin: 0;
+        padding: 20px;
+      }
+
+      .container {
+        position: relative;
+        width: 100%;
+      }
+      .sticky_box {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+      }
+      .horizontal {
+        position: absolute;
+        display: flex;
+        width: 300%;
+        height: 100%;
+      }
+      .horizontal .box {
+        height: 100vh;
+        width: 100%;
+      }
+      .horizontal .row1 {
+        background-color: #eae509;
+      }
+      .horizontal .row2 {
+        background-color: #7dce13;
+      }
+      .horizontal .row3 {
+        background-color: #5bb318;
+      }
+
+      /* 아이프레임 */
+      .video {
+        position: relative;
+        padding-bottom: 73%;
+        height: 0;
+        overflow: hidden;
+        padding-top: 0;
+      }
+      .video iframe,
+      .video object,
+      .video embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 가로 스크롤 영역 -->
+    <div class="container">
+      <div class="sticky_box">
+        <div class="horizontal">
+          <!-- flex, translateX를 이용해 스크롤-->
+          <div class="box row1">
+            <div class="wrap">
+              <div class="video">
+                <iframe
+                  src="https://player.vimeo.com/video/709357001?color=ffffff&title=0&byline=0&portrait=0&background=1&muted=1&autopause=1#t=0s"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="box row2">row2</div>
+          <div class="box row3">row3</div>
+        </div>
+      </div>
+    </div>
+    <section class="empty_box">
+      <h3>empty_box2</h3>
+    </section>
+    <section class="empty_box">
+      <h3>empty_box3</h3>
+    </section>
+
+    <script>
+      const container = document.querySelector(".container");
+      const stickyBox = document.querySelector(".sticky_box");
+      const horizontal = document.querySelector(".horizontal");
+
+      const calcHeight = (item) => {
+        const clientWidth = document.documentElement.clientWidth;
+        const clientHeight = document.documentElement.clientHeight;
+
+        // horizontal의 숨겨진 영역까지의 가로 크기(전체크기) - 브라우저 가로 크기 + 브라우저의 높이
+        return item.scrollWidth - clientWidth + clientHeight;
+      };
+
+      let conHt = (container.style.height = `${calcHeight(horizontal)}px`);
+      // 스크롤이 될때마다 값을 받아와 가로 이동
+      addEventListener("scroll", () => {
+        console.log("ho", horizontal.offsetTop); // 가장 가까운 포지션을 기준으로 위치값 계산 0
+        console.log("st", stickyBox.offsetTop); // sticky : scroll 기준. offset의 기준도 scroll. sticky 박스를 scroll 박스에 고정되는 지점에서부터 다시 offsetTop의 값이 결정
+        horizontal.style.transform = `translateX(-${stickyBox.offsetTop}px)`;
+      });
+    </script>
+  </body>
+</html>

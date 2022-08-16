@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <title>title</title>
+    <style>
+      body {
+        font-family: "Arita-dotum-Medium", "나눔고딕", "맑은 고딕", sans-serif;
+      }
+      a {
+        color: inherit;
+      }
+      .container {
+        width: 300%;
+        display: flex;
+        justify-content: space-around;
+      }
+      .wrap {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+      }
+      .wrap1 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+      }
+      .wrap2 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+      }
+      .video {
+        position: relative;
+        padding-bottom: 73%;
+        height: 0;
+        overflow: hidden;
+        padding-top: 0;
+      }
+      .video iframe,
+      .video object,
+      .video embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .logo h1 {
+        width: 200px;
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+      }
+      .logo h2 {
+        width: 45px;
+        position: absolute;
+        top: 30px;
+        left: 56px;
+        z-index: 9999;
+      }
+      .logo .menuBar {
+        color: #fff;
+        z-index: 9999;
+        position: absolute;
+        top: 40px;
+        right: 56px;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+      .logo .menuBar #menuBox {
+        width: 12px;
+        height: 12px;
+        background-color: #fff;
+        margin-left: 10px;
+        display: inline-block;
+      }
+      .logo .bottom_logo_left {
+        position: absolute;
+        left: 56px;
+        bottom: 30px;
+        z-index: 9999;
+      }
+      .logo .bottom_logo_right {
+        position: absolute;
+        right: 56px;
+        bottom: 30px;
+        z-index: 9999;
+      }
+
+      .container {
+        /* transition: all 0.5s; */
+      }
+      .box {
+        /* 아래 두줄은 제이쿼리 부분에서 box에 css 주는거 없을때 필요  */
+        /* float: left;
+            width: calc(100% / 4); */
+        height: 100vh;
+        font-size: 100px;
+        line-height: 100vh;
+        text-align: center;
+        box-sizing: border-box;
+      }
+      .next {
+        position: absolute;
+      }
+    </style>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NHBF26H");
+    </script>
+    <script src="../../common/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="wrap">
+          <div class="video">
+            <iframe
+              src="https://player.vimeo.com/video/709357001?color=ffffff&title=0&byline=0&portrait=0&background=1&muted=1&autopause=1#t=0s"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="logo">
+            <h1>
+              <a href="/"
+                ><img src="../images/header_logo_white.png" alt="오설록 로고"
+              /></a>
+            </h1>
+            <h2>
+              <a href="/"
+                ><img
+                  src="../images/header_logo_left.png"
+                  alt="오설록 심볼마크"
+              /></a>
+            </h2>
+            <div class="middle_logo">
+              <div class="circle"></div>
+            </div>
+            <div class="bottom_logo">
+              <div class="bottom_logo_left">
+                <img
+                  src="../images/bottom_logo_left.png"
+                  alt="하단 오른쪽 꺽쇠"
+                />
+              </div>
+              <div class="bottom_logo_right">
+                <img
+                  src="../images/bottom_logo_right.png"
+                  alt="하단 오른쪽 꺽쇠"
+                />
+              </div>
+            </div>
+            <text dy="90" textLength="300%">
+              <textPath xlink:href="#intro-play" textLength="300%">
+                Watch the intro
+              </textPath>
+            </text>
+            <div class="menuBar">
+              <a href="#">menu<span id="menuBox"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        box1
+        <text dy="90" textLength="300%">
+          <textPath xlink:href="#intro-play" textLength="300%">
+            Watch the intro
+          </textPath>
+        </text>
+      </div>
+      <div class="box">box2</div>
+    </div>
+    <div class="next">이상자는?</div>
+    <div class="next">이상자는?</div>
+    <div class="next">이상자는?</div>
+    <script>
+      $(document).ready(function () {
+        let d_width = 0; // 브라우저 가로
+        let d_height = 0; // 문서 전체의 높이
+
+        function tmp() {
+          // container의 가로사이즈(화면가로 * box 개수)
+          let con_width = $(window).outerWidth() * $(".box").length;
+
+          $(".container").css({
+            width: con_width,
+            height: "100vh",
+            position: "fixed",
+            top: 0,
+            left: 0,
+          });
+
+          // css에서 해도 상관없다.
+          $(".box").css({
+            width: con_width / $(".box").length,
+            height: "100vh",
+            float: "left",
+          });
+
+          // box들을 위로 끌어올렸기 때문에 body의 높이는 100vh나 마찬가지인 상태.
+          // 그래서 억지로 전체 box들의 세로크기 만큼 body에 줘야한다.(스크롤 내리기위함)
+          // 이때 높이는 가로영역의 비율과 동일하게 준다. (이후 리미트를 주게 됨으로써 비율의 값이 정해진다.)
+          $("body").css({
+            height: "100vh",
+          });
+
+          let w_width = $(window).width(); // 화면의 가로값
+          let w_height = $(window).height(); // 화면의 세로값
+
+          // 스크롤 될때의 리미트
+          d_width = con_width - w_width; // 전체 가로값 - 현재 화면의 가로값
+          d_height = $("body").height() - w_height; // 전체 세로값 - 현재 화면의 세로값
+        }
+
+        tmp();
+
+        let array = [];
+        for (let i = 0; i < $(".box").length; i++) {
+          array[i] = $(".box").eq(i).offset().left;
+        }
+
+        let chk = true;
+        $(".box").on("mousewheel DOMMouseScroll", function () {
+          if (chk) {
+            // 휠 일정시간동안 막기
+            chk = false;
+            setTimeout(function () {
+              chk = true;
+            }, 500);
+
+            // 휠 방향 감지(아래: -120, 위: 120)
+            let w_delta = event.wheelDelta / 1000;
+
+            // 휠 아래로
+            if (w_delta < 0 && $(this).next().length > 0) {
+              $(".container").animate(
+                {
+                  left: -array[$(this).index() + 1],
+                },
+                500
+              );
+            }
+            // 휠 위로
+            else if (w_delta > 0 && $(this).prev().length > 0) {
+              $(".container").animate(
+                {
+                  left: -array[$(this).index() - 1],
+                },
+                500
+              );
+            }
+          }
+        });
+
+        //브라우저를 resize했을시를 대비해 박스의 크기는 다시 구해준다.
+        $(window).resize(function () {
+          for (let i = 0; i < $(".box").length; i++) {
+            array[i] = $(".box").eq(i).offset().left;
+          }
+
+          tmp();
+        });
+      });
+    </script>
+  </body>
+</html>
