@@ -7,8 +7,10 @@
       name="viewport"
       content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
     />
-    <title>title</title>
+    <title>오설록</title>
     <link rel="stylesheet" href="../common/minireset.css" />
+    <!-- 파비콘 -->
+    <link href="./myfavicon.ico" rel="icon" type="image/x-icon" />
     <style>
       html {
         scroll-behavior: smooth;
@@ -22,6 +24,7 @@
       }
       a {
         color: inherit;
+        display: block;
       }
       /* 고정 값 */
       .logo2 h1 img {
@@ -69,14 +72,6 @@
         display: inline-block;
       }
 
-      .empty_box {
-        background-color: #ddd;
-        height: 100vh;
-        box-sizing: border-box;
-      }
-      .empty_box:last-of-type {
-        background-color: #999;
-      }
       h3 {
         margin: 0;
         padding: 0;
@@ -94,7 +89,7 @@
       .horizontal {
         position: absolute;
         display: flex;
-        width: 300%;
+        width: 345%;
         height: 100%;
       }
       .horizontal .box {
@@ -109,7 +104,12 @@
         width: 95%;
       }
       .horizontal .row3 {
+        width: 50%;
         background-color: #f4efe8;
+      }
+      .horizontal .row4{
+        width: 100%;
+        
       }
       /* 첫번째 페이지 - 아이프레임 */
       .video {
@@ -163,7 +163,7 @@
         position: relative;
       }
       .row2 .photo1 {
-        width: 600px;
+        width: 40%;
         height: 600px;
         background: url(./images/photo1.jpg) 50% / cover;
         margin-right: 100px;
@@ -172,12 +172,12 @@
         margin: 20px 0;
       }
       .row2 ul li:nth-child(1) {
-        margin-bottom: 100px;
+        margin-bottom: 90px;
       }
       .row2 .brandstoryBtn {
         position: absolute;
-        right: 200px;
-        bottom: 200px;
+        right: 0px;
+        bottom: 100px;
         width: 117px;
         height: 117px;
         border-radius: 50%;
@@ -187,25 +187,391 @@
         justify-content: center;
         font-size: 1rem;
       }
-      .row2 .brandstoryBtn:hover {
+      .brandstoryBtn:hover {
         background-color: #000;
         color: #fff;
       }
+    .row2wrap {
+      width: 90%; height: 90%;
+      margin: 0 auto;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* 세번째 페이지 - 갤러리 */
+    .row3 {display:flex;justify-content: center; align-items: center;}
+    .row3 .gallery {display: grid; width: 300px; height: 600px;
+      grid-template-columns: repeat(1,1fr);}
+    .gallery li img {width: 300px; height: 300px; } 
+    /* 네번째 페이지  */
+    .row4wrap {
+      width: 100%; height: 100%;
+      background:url(./images/brand_b0.jpg) 50%/cover;
+      position: relative;
+      overflow: hidden;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      z-index:99;
+   }
+    .row4circle{
+      display: none;
+      width: 1920px; height: 1920px;
+      background: url(./images/background.png) 0% /cover;
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      transition: .5s;
+      z-index: 999;
+    }
       /* 공통 폰트 설정 */
       .title {
-        font-size: 60px;
+        font-size: 45px;
         font-weight: bold;
       }
       .contentFont {
         font-family: "Arita-dotum4.0(OTF)";
         font-weight: 300;
-        font-size: 18px;
+        font-size: 1rem;
         line-height: 1.8;
       }
       .block {
         display: block;
       }
+/* 다섯번째 페이지 */
+      .empty_box {position: relative;
+        height: 100vh;
+        box-sizing: border-box;
+      overflow: hidden;}
+      .svg {
+      width: 1310px;
+      height: 100vh;
+      margin: 0 auto;
+      display: block;
+    }
+    text {
+      fill: black;
+      font-size: 280px;
+      font-weight: normal;
+      font-family: 'Cambria';
+      letter-spacing: 15px;
+    }
+    path {
+      fill: transparent;
+    }
+    .symbol {
+      width: 290px; height: 290px;
+      background: url(./images/logo_color.png) 50%/cover;
+      position: absolute;
+      top: 10%; left: 50%;
+      transform: translateX(-50%);
+    }
+    /* 여섯번째 페이지 */
+    .symbolBlack{
+      width: 145px; height: 145px;
+      background: url(./images/symbol_black.png) 50%/cover;
+      position: absolute;
+      top: 10%; left: 50%;
+      transform: translateX(-50%);
+    }
+    .mountain{
+      width: 768px;
+      height: 344px;
+      background:url(./images/jeju_island.png) no-repeat 50%/contain;
+      position: absolute;
+      left:50%; transform: translateX(-50%);
+      bottom: 18%;
+      z-index: 99;
+    }
+    .sea {
+      width: 1920px; height: 168px;
+      background: url(./images/sea.png) no-repeat 0%/contain;
+      position: absolute;
+      bottom: 10%; left: 0;
+      z-index: 9;
+    }
+    .photo2 {
+      width: 201px; height: 313px;
+      background: url(./images/photo2.png) no-repeat 50%/contain;
+      position: absolute;
+      left: 211px;
+    }
+    .photo3 {
+      width: 412px; height: 523px;
+      background: url(./images/photo3.jpg) no-repeat 50%/cover;
+      position: absolute;
+      left: 0; bottom: 0;
+      z-index:1000;
+    }
+    .photo4 {
+      width: 222px; height: 195px;
+      background: url(./images/photo4.png) no-repeat ;
+      position: absolute;
+      right: 20%; bottom: 0;
+      z-index:1000;
+    }
+    .photo5 {
+      width: 537px; height: 305px;
+      background: url(./images/photo5.jpg) no-repeat 50% 100%;
+      position: absolute;
+      right: -20px; top: 20%
+    }
+    /* 일곱번째 페이지 */
+    .empty_box3 {
+      display: flex;
+      position: relative;
+      overflow: visible;
+    }
+    .leftBox{
+      width: 60%;height: 300vh;
+      position: absolute;
+      top: 0;left: 0;
+    }
+    .photo6{
+      width: 829px; height: 560px;
+      background: url(./images/photo6.jpg) no-repeat 50%/cover;
+      position: absolute;
+      top :3%; left: 50%; transform: translateX(-50%);
+    }
+    .photo7{
+      width: 370px; height: 370px;
+      background: url(./images/photo7.png) no-repeat 50%/cover;
+      position: absolute;
+      top: 729px; left: 0;
+    }
+    .photo8{
+      width: 466px; height: 800px;
+      background: url(./images/photo8.png) no-repeat 50%/cover;
+      position: absolute;
+      top: 729px; left: 45%; 
+    }
+    .photo9{
+      width: 980px; height: 1000px;
+      background: url(./images/photo9.png) no-repeat 50%/cover;
+      position: absolute;
+      bottom :200px; left: 0;
+      z-index: 999;
+    }
+    .rightBox{
+      width: 40%; height: 300vh;
+      position: absolute; 
+      top:0; right: 0;
+      display: flex;
+    }
+    .rightBoxWrap{
+      margin-top: 30vh;
+      position: sticky;
+      top: 30vh;
+      width: 100%;
+      height: 100vh;  
+      padding-left: 40px;
+    }
+  .rightBox .title {
+    margin-bottom: 50px;
+  }
+  .rightBox .contentFont {
+    margin: 30px 0;
+  }
+  .rightBox .brandstoryBtn {
+      margin-top: 50px;
+        width: 117px;
+        height: 117px;
+        border-radius: 50%;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+      }
+    /* 여덟번째 페이지 */
+    .empty_box4{
+    margin-top: 1600px;
+    background-color: #d3cabe ;
+    position: relative;
+    }
+          .empty_box4 ul{
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top:150px; left: 50%; transform: translateX(-50%);
+          }
+
+          #dadaGallery{
+            width: auto;
+            position: absolute;
+            top: 300px;
+            display: grid;
+            grid-template-areas: 
+            "third first forth"
+            "second first forth";
+           grid-gap: 5px;
+      
+          }
+          #dadaGallery  li:nth-child(1) img,#dadaGallery  li:nth-child(4) img {
+            width: 350px; height: 515px;
+          }
+    
+          #dadaGallery li:nth-child(1){
+            width: 350px; height: 500px;
+            grid-row: first; grid-column: first;
+          }
+          #dadaGallery li:nth-child(2){
+            width: 415px; 
+            grid-row: second; grid-column: second;
+          }
+          #dadaGallery li:nth-child(3){
+            width: 415px;
+            grid-row: third; grid-column: third;
+          }
+          #dadaGallery li:nth-child(4){
+            width: 350px; height: 490px;
+            grid-row: forth; grid-column: forth;
+          }
+    /* 열번째 페이지 */
+    .empty_box5 {
+    display: flex;
+    position: relative;
+    overflow: visible;
+    }
+    .leftBox2{
+      width: 40%; height: 300vh;
+      position: absolute; 
+      top:0; left: 0;
+      padding-left: 80px;
+      display: flex;
+    }
+    .leftBox2Wrap{
+      margin-top: 25vh;
+      position: sticky;
+      top: 25vh;
+      width: 100%;
+      height: 100vh;  
+      padding-left: 40px;
+    }
+  .leftBox2 .title {
+    margin-bottom: 50px;
+  }
+  .leftBox2 .contentFont {
+    margin: 30px 0;
+  }
+  .leftBox2 .brandstoryBtn {
+      margin-top: 50px;
+        width: 117px;
+        height: 117px;
+        border-radius: 50%;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+      }
+      .rightBox2{
+      width: 60%;height: 300vh;
+      position: absolute;
+      top: 0;right: 0;
+    }
+    .rightBoxPhoto {
+      position: absolute;
+      background: no-repeat 50%/cover;
+    }
+    .photo10{
+      width:821px; height: 663px;
+      background-image: url(./images/photo10.jpg.png);
+      top: 200px;
+      left: 50%; transform: translateX(-50%);
+    }
+    .photo11{
+      width: 484px; height: 722px;
+      background-image: url(./images/photo11.png);
+      top: 980px; right: 0;
+    }
+    .photo12{
+      width: 355px; height: 234px;
+      background-image: url(./images/photo12.png);
+      top: 1385px; left:150px;
+    }
+    .photo13{
+      width: 355px; height: 234px;
+      background-image: url(./images/photo13.png);
+      top: 1600px; left:150px;
+    }
+    .photo14{
+      width: 355px; height: 234px;
+      background-image: url(./images/photo14.png);
+      top: 1800px; right: 200px;
+    }
+    .photo15{
+      width: 970px; height: 505px;
+      background-image: url(./images/photo15.png);
+      bottom:180px; right: 0;
+      z-index:999;
+    }
+/* 열한번째 이미지 */
+.empty_box6{
+    margin-top: 1800px;
+    position: relative;
+    background: url(./images/brand_b1.jpg) no-repeat 50%/cover;
+    }
+/* 마지막 */
+.symbolbox{
+  float:left;
+  width: 50%; height:calc(100vh - 60px);
+  background-color: #828b78;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer_logo{
+  width:300px; height: 300px;
+  background: url(./images/footer_logo.png) no-repeat 50%/cover;
+}
+.contactbox{
+  float: left;
+  width: 50%; height:calc(100vh - 60px);
+  background-color: #d3cabe ;
+  text-align: center;
+}
+.contactbox .txtWrap{
+  width: 50%; height: 30%;
+  margin: 30vh auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.contactbox h3{
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+.contactbox p{
+  font-weight: 200;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.contactbox a {
+width: 350px;
+  display: block;
+  border: 2px solid black;
+  padding: 20px;  
+}
+.contactbox a:hover{
+  background-color:#828b78 ;
+  color: #fff;
+}
+
+.footer {
+  clear: both;
+  width: 100%; height:60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #000;
+  color:#fff;
+  font-size:1rem
+}
     </style>
+    <script src="../common/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <!-- 가로 스크롤 영역 -->
@@ -247,47 +613,160 @@
             </div>
           </div>
           <div class="box row2">
-            <div class="photo1"></div>
-            <ul>
-              <li class="title">
-                자연과 인간의 정성이<span class="block"
-                  >빚어낸 프리미엄 티</span
-                >
-              </li>
-              <li class="contentFont">
-                국내 최대 차 브랜드이자 세계적으로 유명한
-                <span class="block"
-                  >오설록은 차의 생산, 수확, 판매를 아우르는 차와</span
-                >
-                <span class="block">관련된 모든 과정을 통합하고 있습니다.</span>
-              </li>
+            <div class="row2wrap">
+              <div class="photo1"></div>
+              
+              <ul>
+                <li class="title">
+                  자연과 인간의 정성이<br>빚어낸 프리미엄 티
+                </li>
+                <li class="contentFont">
+                  국내 최대 차 브랜드이자 세계적으로 유명한
+                  <br>오설록은 차의 생산, 수확, 판매를 아우르는 차와<br>관련된 모든 과정을 통합하고 있습니다.
+                </li>
 
-              <li class="contentFont">
-                오설록은 자연과 인간 모두에게 이로운 기술농법으로
-                <span class="block"
-                  >최고의 녹차를 수확하기 위해 많은 노력을 기울이고 있습니다.
-                </span>
-              </li>
-              <li class="contentFont">
-                전통을 계승하면서도 새로운 트렌드를 수용하여
-                <span class="block"
-                  >최고의 차를 만드는 것이 현대의 기술을 접목하는 것이</span
-                >
-                <span class="block">오설록의 철학입니다.</span>
-              </li>
-            </ul>
-            <a href="#" class="brandstoryBtn">Brand Story</a>
+                <li class="contentFont">
+                  오설록은 자연과 인간 모두에게 이로운 기술농법으로
+                  <br>최고의 녹차를 수확하기 위해 많은 노력을 기울이고 있습니다.
+                  </span>
+                </li>
+                <li class="contentFont">
+                  전통을 계승하면서도 새로운 트렌드를 수용하여
+                  <br>최고의 차를 만드는 것이 현대의 기술을 접목하는 것이<br>오설록의 철학입니다.
+                </li>
+              </ul>
+              <a href="#" class="brandstoryBtn">Brand Story</a>
+            </div>
           </div>
 
-          <div class="box row3">row3</div>
+          <div class="box row3">
+            <ul class="gallery">
+              <li><img src="./images/gallery_img1.png" alt="녹차"></li>
+              <li><img src="./images/gallery_img4.png" alt="녹차"></li>
+            </ul>
+          </div>
+
+          <div class="box row4">
+            <div class="row4wrap">
+              <div class="row4circle"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <!-- 다섯번째 페이지 -->
     <section class="empty_box">
-      <h3>empty_box2</h3>
+      <svg class="svg">
+        <defs>
+          <path id="text-curve" class="path" d="M 0 0 A 1 1 0 0 0 1310 0"></path>
+        </defs>
+        <text x="0" y="0">
+          <textPath href="#text-curve">
+            TEA FROM JEJU
+          </textPath>
+        </text>
+      </svg>
+      <div class="symbol"></div>
     </section>
+    <!-- 여섯번째 페이지 -->
     <section class="empty_box">
-      <h3>empty_box3</h3>
+      <div class="symbolBlack"></div>
+      <div class="mountain"></div>
+      <div class="sea"></div>
+      <div class="photo2"></div>
+      <div class="photo3"></div>
+      <div class="photo4"></div>
+      <div class="photo5"></div>
+    </section>
+    <!-- 일곱번째 페이지 -->
+    <section class="empty_box empty_box3">
+      <div class="leftBox">
+        <div class="photo6"></div>
+        <div class="photo7"></div>
+        <div class="photo8"></div>
+        <div class="photo9"></div>
+      </div>
+      <div class="rightBox">
+        <div class="rightBoxWrap">
+        <ul>
+          <li class="title">
+            그대로의 제주를<br>담은 차
+          </li>
+          <li class="contentFont">
+            대한민국이 가진 천혜의 자연 유산 제주, 화산섬 제주가 가진  <br>경의로운 생명력으로 오설록의 차는 탄생합니다.
+          </li>
+          <li class="contentFont">
+            약 100만 평에 달하는 3개의 오설록 유기농 차밭은 화산섬의 지역적 기후 환경에 <br>따라 각각의 색과 향, 그리고 맛이 특별한 차를 생산하고 있습니다.
+          </li>
+        </ul>
+        <a href="#" class="brandstoryBtn">View More</a>
+      </div>
+    </div>
+    </section>
+    <section class="empty_box empty_box4">
+      <ul>
+        <li class="title">
+          다다일상,<br>차와 함께하는 삶
+        </li>
+        <li class="contentFont">
+          차를 마시는 것은 일상의 쉼을 가지며, <br>나를 이끌어내고 세상을 따뜻하게 바라보는 것에 관한 일입니다. <br>
+          차 한잔으로 달라진 당신의 일상을 경험해보세요.
+        </li>
+      </ul>
+      <ul id="dadaGallery">
+        <li><img src="./images/dada1.png" alt="다다일상1"></li>
+        <li><img src="./images/dada3.png" alt="다다일상2"></li>
+        <li><img src="./images/dada4.png" alt="다다일상3"></li>
+        <li><img src="./images/dada2.png" alt="다다일상4"></li>
+      </ul>
+    </section>
+
+    <section class="empty_box empty_box5">
+      <div class="leftBox2">
+        <div class="leftBox2Wrap">
+          <ul>
+            <li class="title">
+              차와 제주도가 선사하는<br>삶의 아름다움
+            </li>
+            <li class="contentFont">
+              1분 1초가 중요한 바쁜 삶에서 좋은 차 한잔이 모든 것을 의미하는 순간이<br>있습니다. 좋은 사람들과 그 순간을 함께 하면 우리의 삶이 더욱 아름다워집니다.
+            </li>
+            <li class="contentFont">
+              오설록은 녹차밭과 차 문화의 깊이를 느낄 수 있는 티스톤과 티 뮤지엄,<br>제주의 자연환경과 정신을 담아낸 최고의 차가 담긴 도심 속 티하우스를 선보입니다.
+            </li>
+            <li class="contentFont">
+              바쁜 현대사회 속에서 마음을 가꾸면서 따뜻한 인간관계를 형성하고 삶의 맛을<br>느낄 수 있는 소중한 시간을 제공하고자 합니다.
+            </li>
+          </ul>
+          <a href="#" class="brandstoryBtn">View More</a>
+        </div>
+      </div>
+      <div class="rightBox2">
+        <div class="rightBoxPhoto photo10"></div>
+        <div class="rightBoxPhoto photo11"></div>
+        <div class="rightBoxPhoto photo12"></div>
+        <div class="rightBoxPhoto photo13"></div>
+        <div class="rightBoxPhoto photo14"></div>
+        <div class="rightBoxPhoto photo15"></div>
+    </div>
+    </section>
+
+    <section class="empty_box empty_box6">
+    </section>
+    <section class="empty_box empty_box7">
+      <div class="symbolbox">
+        <div class="footer_logo"></div>
+      </div>
+      <div class="contactbox">
+        <div class="txtWrap">
+        <h3>Contact Me</h3>
+        <p>heodayeong@gmail.com</p>
+        <a href="https://zeroall-h.github.io/portfolio/" class="contactBtn">포트폴리오 바로가기</a>
+      </div>
+      </div>
+      <div class="footer">
+        ⓒ 2022 Design & Published by Heo Da Yeong. All Rights Reserved.
+      </div>
     </section>
 
     <script>
@@ -310,6 +789,8 @@
         console.log("st", stickyBox.offsetTop); // sticky : scroll 기준. offset의 기준도 scroll. sticky 박스를 scroll 박스에 고정되는 지점에서부터 다시 offsetTop의 값이 결정
         horizontal.style.transform = `translateX(-${stickyBox.offsetTop}px)`;
       });
+
+
     </script>
   </body>
 </html>
